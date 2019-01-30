@@ -16,6 +16,11 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity
+      android:name=".chapter01.fragment.FragmentKgAct"
+      android:screenOrientation="portrait"
+      />
+    <activity android:name=".chapter01.Chapter01Activity"/>
   </application>
 
 </manifest>
