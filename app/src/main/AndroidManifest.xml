@@ -21,6 +21,12 @@
       android:screenOrientation="portrait"
       />
     <activity android:name=".chapter01.Chapter01Activity"/>
+    <service android:name=".chapter01.service.ServiceKg"
+
+        >
+      <intent-filter android:priority="1000"/>
+    </service>
+    <activity android:name=".chapter01.service.ActivityService"/>
   </application>
 
 </manifest>

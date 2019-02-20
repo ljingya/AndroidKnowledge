@@ -8,12 +8,7 @@
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第一个Fragment" />
+        android:text="第二个Fragment" />
 
-    <FrameLayout
-        android:id="@+id/fl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/btn"
-        />
+
 </android.support.constraint.ConstraintLayout>
