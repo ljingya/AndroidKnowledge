@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import com.lijingya.androidknowledge.R;
 import com.lijingya.androidknowledge.base.BaseFragment;
 
@@ -24,6 +25,10 @@ public class FragmentKgFirst extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView");
         View view = inflater.inflate(R.layout.act_frag_kg_first, container, false);
+        Button btn = view.findViewById(R.id.btn);
+        Bundle bundle = getArguments();
+        String key = bundle.getString("key");
+        btn.setText(key);
         return view;
     }
 }

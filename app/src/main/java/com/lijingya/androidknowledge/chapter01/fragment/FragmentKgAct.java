@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.widget.FrameLayout;
 import com.lijingya.androidknowledge.R;
 import com.lijingya.androidknowledge.base.BaseActivity;
 
@@ -24,7 +23,11 @@ public class FragmentKgAct extends BaseActivity {
         setContentView(R.layout.act_frag_kg);
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         FragmentTransaction ft = supportFragmentManager.beginTransaction();
-        ft.add(R.id.fl, new FragmentKgFirst(), "first");
+        FragmentKgFirst fragmentKgFirst = new FragmentKgFirst();
+        Bundle bundle = new Bundle();
+        bundle.putString("key", "Hello");
+        fragmentKgFirst.setArguments(bundle);
+        ft.add(R.id.fl, fragmentKgFirst, "first");
         ft.commit();
     }
 }
