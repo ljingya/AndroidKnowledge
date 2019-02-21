@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import com.lijingya.androidknowledge.R;
 import com.lijingya.androidknowledge.chapter01.fragment.FragmentKgAct;
+import com.lijingya.androidknowledge.chapter01.service.ActivityService;
+import com.lijingya.androidknowledge.chapter01.service.ServiceKg;
 
 /**
  * @author lijingya
@@ -23,18 +25,21 @@ public class Chapter01Activity extends AppCompatActivity implements OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_chapter01);
         findViewById(R.id.fragment).setOnClickListener(this);
+        findViewById(R.id.service).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.fragment:
-                intent.setClass(this, FragmentKgAct.class);
+                startActivity(new Intent(this, FragmentKgAct.class));
                 break;
+                case R.id.service:
+                   startActivity(new Intent(this,ActivityService.class));
+                    break;
             default:
                 break;
         }
-        startActivity(intent);
+
     }
 }
