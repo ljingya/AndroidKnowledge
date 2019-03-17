@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import com.lijingya.androidknowledge.R;
+import com.lijingya.androidknowledge.chapter01.broadccast.BraodcastAct;
 import com.lijingya.androidknowledge.chapter01.fragment.FragmentKgAct;
 import com.lijingya.androidknowledge.chapter01.service.ActivityService;
 import com.lijingya.androidknowledge.chapter01.service.ServiceKg;
@@ -26,6 +27,7 @@ public class Chapter01Activity extends AppCompatActivity implements OnClickListe
         setContentView(R.layout.act_chapter01);
         findViewById(R.id.fragment).setOnClickListener(this);
         findViewById(R.id.service).setOnClickListener(this);
+        findViewById(R.id.broadcast).setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +38,9 @@ public class Chapter01Activity extends AppCompatActivity implements OnClickListe
                 break;
                 case R.id.service:
                    startActivity(new Intent(this,ActivityService.class));
+                    break;
+            case R.id.broadcast:
+                startActivity(new Intent(this,BraodcastAct.class));
                     break;
             default:
                 break;

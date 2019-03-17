@@ -13,7 +13,6 @@ import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.lijingya.androidknowledge.MainActivity;
 import com.lijingya.androidknowledge.R;
 
 public class ServiceKg extends Service {
